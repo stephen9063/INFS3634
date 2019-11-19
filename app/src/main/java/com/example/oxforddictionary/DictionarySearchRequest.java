@@ -20,9 +20,9 @@ public class DictionarySearchRequest extends AsyncTask<String,Integer,String> {
     Context context;
     TextView showDef;
 
-    DictionarySearchRequest(Context context, TextView tv) {
+    DictionarySearchRequest(Context context, TextView textView) {
         this.context = context;
-        showDef = tv;
+        showDef = textView;
     }
     String myurl;
 
