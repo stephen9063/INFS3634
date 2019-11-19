@@ -13,19 +13,19 @@ import com.example.oxforddictionary.R;
 public class search extends AppCompatActivity {
 
     String url;
-    private TextView showDef;
+    private TextView definition;
     private TextView enterWord;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        showDef = findViewById(R.id.showDef);
+        definition = findViewById(R.id.definition);
         enterWord = findViewById(R.id.enterWord);
     }
 
     public void requestApiButtonClick (View v){
-        DictionarySearchRequest myDictionaryRequest = new DictionarySearchRequest(this, showDef) ;
+        DictionarySearchRequest myDictionaryRequest = new DictionarySearchRequest(this, definition) ;
         url = dictionaryEntries();
         myDictionaryRequest.execute(url);
 
