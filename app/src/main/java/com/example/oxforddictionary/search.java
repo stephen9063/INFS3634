@@ -4,17 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.oxforddictionary.DictionarySearchRequest;
-import com.example.oxforddictionary.R;
+import com.example.request.DictionarySearchRequest;
 
 public class search extends AppCompatActivity {
 
     String url;
     private TextView definition;
     private TextView enterWord;
+    private TextView pronuncia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +27,8 @@ public class search extends AppCompatActivity {
         DictionarySearchRequest myDictionaryRequest = new DictionarySearchRequest(this, definition) ;
         url = dictionaryEntries();
         myDictionaryRequest.execute(url);
-
     }
+
 
     private String dictionaryEntries() {
         final String language = "en-gb";
