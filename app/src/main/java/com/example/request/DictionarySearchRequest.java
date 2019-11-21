@@ -78,9 +78,6 @@ public class DictionarySearchRequest extends AsyncTask<String,Integer,String> {
             JSONObject de = sensesArray.getJSONObject(0);
             JSONArray d = de.getJSONArray("definitions");
 
-            /*JSONObject pro = e.getJSONObject(0);
-            JSONArray p = pro.getJSONArray("pronunciations");*/
-
             def = d.getString(0);
             showDef.setText("Definitions: " + "\n" + def);
             
