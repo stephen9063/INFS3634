@@ -20,7 +20,7 @@ public class DictionarySearchRequest extends AsyncTask<String,Integer,String> {
     Context context;
     TextView showDef;
 
-    DictionarySearchRequest(Context context, TextView textView) {
+    public DictionarySearchRequest(Context context, TextView textView) {
         this.context = context;
         showDef = textView;
     }
@@ -83,9 +83,7 @@ public class DictionarySearchRequest extends AsyncTask<String,Integer,String> {
 
             def = d.getString(0);
             showDef.setText("Definitions: " + "\n" + def);
-
-           /*pronun = p.getString(0);
-           pronuncia.setText(pronun);*/
+            
 
 
         } catch (JSONException e) {
